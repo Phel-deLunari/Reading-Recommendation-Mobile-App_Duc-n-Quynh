@@ -1,4 +1,3 @@
-// Toàn bộ code cho file: lib/utils/localization.dart
 
 enum NgonNgu { viet, anh }
 
@@ -19,7 +18,6 @@ class Strings {
         return nn == NgonNgu.viet ? 'Về màn hình chính' : 'Home';
       case StringsEnum.gioiThieuCaiDat:
         return nn == NgonNgu.viet ? 'Tùy chỉnh ngôn ngữ' : 'Customize language';
-      // Thêm các case khác nếu bạn cần
       case StringsEnum.trangChu:
         return nn == NgonNgu.viet ? 'Trang chủ' : 'Home';
       case StringsEnum.danhMuc:
@@ -36,6 +34,7 @@ enum StringsEnum {
   quayLai,
   veManHinhChinh,
   gioiThieuCaiDat,
-  trangChu, // Thêm
-  danhMuc, // Thêm
+  trangChu,
+  danhMuc, 
 }
+
