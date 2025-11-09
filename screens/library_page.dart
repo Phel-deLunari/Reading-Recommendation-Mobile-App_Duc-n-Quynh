@@ -1,10 +1,8 @@
-// Toàn bộ code cho file: lib/screens/library_page.dart
 
 import 'package:flutter/material.dart';
 import '../utils/localization.dart';
 
 class LibraryPage extends StatelessWidget {
-  // Đổi tên
   final NgonNgu ngonNgu;
   const LibraryPage({super.key, required this.ngonNgu});
 
@@ -19,7 +17,6 @@ class LibraryPage extends StatelessWidget {
     ];
 
     return Material(
-      // Đổi thành Scaffold để có AppBar
       child: Scaffold(
         appBar: AppBar(title: Text(Strings.get(StringsEnum.thuVien, ngonNgu))),
         body: Padding(
@@ -40,3 +37,4 @@ class LibraryPage extends StatelessWidget {
     );
   }
 }
+
