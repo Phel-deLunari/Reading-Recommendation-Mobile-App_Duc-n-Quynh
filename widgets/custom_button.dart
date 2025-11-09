@@ -1,4 +1,3 @@
-// Toàn bộ code cho file: lib/widgets/custom_button.dart
 
 import 'package:flutter/material.dart';
 
@@ -23,7 +22,7 @@ class CustomButton extends StatelessWidget {
       icon: Icon(
         icon ?? Icons.circle,
         size: 18,
-      ), // Sửa nhỏ: icon ?? Icons.circle
+      ),
       label: Text(label),
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
@@ -32,3 +31,4 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
