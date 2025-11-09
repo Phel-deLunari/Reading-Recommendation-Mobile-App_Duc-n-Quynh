@@ -1,12 +1,11 @@
-// Toàn bộ code cho file: lib/screens/category_page.dart
 
 import 'package:flutter/material.dart';
-import '../utils/localization.dart'; // <-- THÊM
+import '../utils/localization.dart'; 
 
 class CategoryPage extends StatelessWidget {
-  final NgonNgu ngonNgu; // <-- THÊM
+  final NgonNgu ngonNgu; 
   const CategoryPage({Key? key, required this.ngonNgu})
-    : super(key: key); // <-- THÊM
+    : super(key: key); 
 
   static const List<String> _categories = [
     'Văn học',
@@ -23,12 +22,12 @@ class CategoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Strings.get(StringsEnum.danhMuc, ngonNgu)), // <-- SỬA
+        title: Text(Strings.get(StringsEnum.danhMuc, ngonNgu)), 
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(16.0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // 2 cột
+          crossAxisCount: 2, 
           crossAxisSpacing: 16.0,
           mainAxisSpacing: 16.0,
           childAspectRatio: 3 / 1,
@@ -55,3 +54,4 @@ class CategoryPage extends StatelessWidget {
     );
   }
 }
+
