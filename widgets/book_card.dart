@@ -1,10 +1,9 @@
-// Toàn bộ code cho file: lib/widgets/book_card.dart (ĐÃ SỬA)
 
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
   final String title;
-  final String imageUrl; // Bây giờ đây là đường dẫn asset
+  final String imageUrl; 
   final VoidCallback onTap;
 
   const BookCard({
@@ -30,15 +29,12 @@ class BookCard extends StatelessWidget {
                   top: Radius.circular(4.0),
                 ),
 
-                // THAY ĐỔI CHÍNH Ở ĐÂY
                 child: Image.asset(
-                  // <-- Sửa từ Image.network
-                  imageUrl, // Dùng đường dẫn asset 'assets/images/...'
+                  imageUrl, 
                   height: 160,
                   width: 130,
                   fit: BoxFit.cover,
 
-                  // Báo lỗi nếu không tìm thấy asset
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
                       height: 160,
@@ -48,11 +44,8 @@ class BookCard extends StatelessWidget {
                     );
                   },
                 ),
-                // Chúng ta không cần 'loadingBuilder' nữa
-                // vì ảnh asset tải lên ngay lập tức
               ),
 
-              // Tên sách (giữ nguyên)
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
@@ -69,3 +62,4 @@ class BookCard extends StatelessWidget {
     );
   }
 }
+
