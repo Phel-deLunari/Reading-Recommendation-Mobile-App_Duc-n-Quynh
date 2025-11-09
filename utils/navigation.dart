@@ -1,4 +1,3 @@
-// Toàn bộ code cho file: lib/utils/navigation.dart
 
 import 'package:flutter/material.dart';
 
@@ -13,3 +12,4 @@ void quay_ve_man_hinh_truoc(BuildContext context) {
 void quay_ve_man_hinh_chinh(BuildContext context) {
   Navigator.popUntil(context, (route) => route.isFirst);
 }
+
