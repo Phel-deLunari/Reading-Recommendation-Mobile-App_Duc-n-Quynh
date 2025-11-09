@@ -1,4 +1,3 @@
-// Toàn bộ code cho file: lib/screens/settings_page.dart (ĐÃ SỬA)
 
 import 'package:flutter/material.dart';
 import '../utils/localization.dart';
@@ -21,7 +20,6 @@ class SettingsPage extends StatelessWidget {
       color: Colors.white,
       child: Center(
         child: Column(
-          // 1. SỬA LỖI ĐÁNH MÁY: "mainAxisAlimentam" -> "mainAxisAlignment"
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
@@ -73,3 +71,4 @@ class SettingsPage extends StatelessWidget {
     );
   }
 }
+
