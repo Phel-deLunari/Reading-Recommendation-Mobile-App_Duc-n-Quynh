@@ -1,14 +1,12 @@
-// Toàn bộ code cho file: lib/screens/profile_page.dart
 
 import 'package:flutter/material.dart';
-import 'settings_page.dart'; // <-- Import trang Cài đặt
+import 'settings_page.dart'; 
 import '../utils/localization.dart';
-import '../utils/navigation.dart'; // <-- Import hàm điều hướng
+import '../utils/navigation.dart'; 
 
 class ProfilePage extends StatelessWidget {
-  // Đổi tên
   final NgonNgu ngonNgu;
-  final Function(NgonNgu) doiNgonNgu; // Cần cả hàm đổi ngôn ngữ
+  final Function(NgonNgu) doiNgonNgu; 
 
   const ProfilePage({
     super.key,
@@ -19,15 +17,12 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Dùng Scaffold
       appBar: AppBar(
         title: Text(Strings.get(StringsEnum.thongTin, ngonNgu)),
         actions: [
-          // Nút Cài đặt
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              // Mở trang Cài đặt
               hien_thi_man_hinh(
                 context,
                 SettingsPage(ngonNgu: ngonNgu, doiNgonNgu: doiNgonNgu),
@@ -73,10 +68,10 @@ class ProfilePage extends StatelessWidget {
             const Text(
               '💡 Phát triển: Giao diện trang chủ, chi tiết sách, danh mục sách',
             ),
-            // XÓA 2 NÚT "Quay lại" và "Về màn hình chính" ở đây
           ],
         ),
       ),
     );
   }
 }
+
