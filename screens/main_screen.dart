@@ -1,16 +1,13 @@
-// Toàn bộ code cho file: lib/screens/main_screen.dart
 
 import 'package:flutter/material.dart';
-import '../utils/localization.dart'; // <-- Import ngôn ngữ
+import '../utils/localization.dart'; 
 
-// Import tất cả các trang
 import 'home_page.dart';
 import 'category_page.dart';
 import 'library_page.dart';
 import 'profile_page.dart';
 
 class MainScreen extends StatefulWidget {
-  // 1. Nhận state ngôn ngữ từ main.dart
   final NgonNgu ngonNgu;
   final Function(NgonNgu) doiNgonNgu;
 
@@ -32,15 +29,14 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // 2. Tạo danh sách các trang và TRUYỀN state ngôn ngữ xuống
     final List<Widget> _widgetOptions = <Widget>[
-      HomePage(ngonNgu: widget.ngonNgu), // Truyền
-      CategoryPage(ngonNgu: widget.ngonNgu), // Truyền
-      LibraryPage(ngonNgu: widget.ngonNgu), // Truyền
+      HomePage(ngonNgu: widget.ngonNgu), 
+      CategoryPage(ngonNgu: widget.ngonNgu), 
+      LibraryPage(ngonNgu: widget.ngonNgu),
       ProfilePage(
         ngonNgu: widget.ngonNgu,
         doiNgonNgu: widget.doiNgonNgu,
-      ), // Truyền
+      ), 
     ];
 
     return Scaffold(
@@ -48,7 +44,6 @@ class _MainScreenState extends State<MainScreen> {
         child: IndexedStack(index: _selectedIndex, children: _widgetOptions),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        // 3. Dùng class Strings để dịch các label
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: const Icon(Icons.home),
@@ -76,3 +71,4 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
+
