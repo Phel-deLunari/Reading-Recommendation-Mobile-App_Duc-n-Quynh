@@ -1,16 +1,15 @@
-// Toàn bộ code cho file: lib/screens/book_details_page.dart (ĐÃ SỬA)
 
 import 'package:flutter/material.dart';
-import '../utils/localization.dart'; // <-- THÊM IMPORT NÀY
+import '../utils/localization.dart'; 
 
 class BookDetailsPage extends StatefulWidget {
   final String bookId;
-  final NgonNgu ngonNgu; // <-- THÊM DÒNG NÀY
+  final NgonNgu ngonNgu;
 
   const BookDetailsPage({
     Key? key,
     required this.bookId,
-    required this.ngonNgu, // <-- THÊM DÒNG NÀY
+    required this.ngonNgu, 
   }) : super(key: key);
 
   @override
@@ -29,14 +28,12 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
 
   Future<void> _fetchBookDetails() async {
     print('Đang tải chi tiết cho sách ID: ${widget.bookId}');
-    await Future.delayed(const Duration(seconds: 1)); // Giả lập tải
+    await Future.delayed(const Duration(seconds: 1));
 
-    // SỬA Ở ĐÂY: Dùng dữ liệu giả lập với đường dẫn ảnh local
     setState(() {
       _bookDetails = {
         'title': 'Đắc Nhân Tâm',
         'author': 'Dale Carnegie',
-        // SỬA QUAN TRỌNG: Dùng ảnh local
         'imageUrl': 'assets/images/dac_nhan_tam.jpg',
         'description':
             'Đây là cuốn sách self-help nổi tiếng nhất của Dale Carnegie...',
@@ -61,7 +58,6 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // SỬA QUAN TRỌNG: Đổi Image.network thành Image.asset
                       Image.asset(
                         _bookDetails!['imageUrl']!,
                         width: 130,
@@ -69,7 +65,6 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
-                            // Hiển thị lỗi nếu không tìm thấy asset
                             height: 200,
                             width: 130,
                             color: Colors.grey[200],
@@ -99,23 +94,19 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
                   const SizedBox(height: 24),
                   ElevatedButton(
                     onPressed: () {
-                      /* Xử lý đọc sách */
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 48),
                     ),
-                    // Tạm hardcode, bạn có thể thêm vào class Strings
                     child: const Text('Bắt đầu đọc'),
                   ),
                   const SizedBox(height: 8),
                   OutlinedButton(
                     onPressed: () {
-                      /* Xử lý thêm vào thư viện */
                     },
                     style: OutlinedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 48),
                     ),
-                    // Tạm hardcode, bạn có thể thêm vào class Strings
                     child: const Text('Thêm vào thư viện'),
                   ),
                   const SizedBox(height: 24),
@@ -131,3 +122,4 @@ class _BookDetailsPageState extends State<BookDetailsPage> {
     );
   }
 }
+
